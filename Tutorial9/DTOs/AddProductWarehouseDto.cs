@@ -10,7 +10,7 @@ public class AddProductWarehouseDto
     [Required]
     public int IdWarehouse { get; set; }
     
-    [Range(0, int.MaxValue, ErrorMessage = "Not a valid int number.")]
+    [Range(1, int.MaxValue, ErrorMessage = "Not a valid int number.")]
     public int Amount { get; set; }
     
     public DateTime CreatedAt { get; set; }

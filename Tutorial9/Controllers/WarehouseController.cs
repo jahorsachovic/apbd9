@@ -17,14 +17,14 @@ public class WarehouseController : ControllerBase
     }
     
     [HttpPost]
-    public async Task<IActionResult> addProductToWarehouseAsync([FromBody] ProductWarehouseDto data, CancellationToken cancellationToken)
+    public async Task<IActionResult> AddProductToWarehouseAsync(AddProductWarehouseDto data, CancellationToken cancellationToken)
     {
 
         try
         {
-            var result = await _warehouseService.insertIntoProductWarehouseAsync(data, cancellationToken);
+            var entryId = await _warehouseService.AddProductWarehouseAsync(data, cancellationToken);
             
-            return Ok(result);
+            return Ok(entryId);
             
         }
         catch (Exception e)

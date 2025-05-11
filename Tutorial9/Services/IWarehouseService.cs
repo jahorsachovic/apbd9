@@ -5,5 +5,5 @@ namespace Tutorial9.Services;
 
 public interface IWarehouseService
 {
-    Task<int> insertIntoProductWarehouseAsync(ProductWarehouseDto productWarehouse, CancellationToken cancellationToken);
+    Task<int> AddProductWarehouseAsync(AddProductWarehouseDto data, CancellationToken cancellationToken);
 }
